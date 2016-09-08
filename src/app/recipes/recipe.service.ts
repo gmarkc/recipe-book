@@ -1,9 +1,8 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Recipe, Ingredient } from '../shared';
 
 @Injectable()
 export class RecipeService {
-  selectedRecipeChanged = new EventEmitter<Recipe>();
 
   private recipes: Recipe[] = [
     new Recipe('Schnitzel','Very tasty','http://www.coopzeitung.ch/site/presse/displayImageThumbService/1613009/600x400/Wiener_Schnitzel.jpg', [
@@ -25,7 +24,11 @@ export class RecipeService {
     return this.recipes;
   }
 
-  pushSelectedRecipe(value: Recipe) {
-    this.selectedRecipeChanged.emit(value);
+  getRecipe(id: number) {
+    return this.recipes[id];
+  }
+
+  deleteRecipe(recipe: Recipe) {
+    this.recipes.splice(this.recipes.indexOf(recipe), 1);
   }
 }
