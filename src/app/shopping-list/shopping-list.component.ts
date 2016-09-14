@@ -15,4 +15,7 @@ export class ShoppingListComponent implements OnInit {
     this.items = this.sls.getItems();
   }
 
+  itemClicked(item: Ingredient) {
+    console.log("item clicked:", item.name, item.amount);
+  }
 }
