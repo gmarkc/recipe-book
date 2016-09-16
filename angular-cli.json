@@ -1,7 +1,7 @@
 {
   "project": {
-    "version": "1.0.0-beta.11-webpack.8",
-    "name": "recipe-book"
+    "version": "1.0.0-beta.14",
+    "name": "migration-project"
   },
   "apps": [
     {
@@ -14,12 +14,14 @@
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "mobile": false,
-      "styles": [],
+      "styles": [
+        "styles.css"
+      ],
       "scripts": [],
       "environments": {
-        "source": "config/environment.ts",
-        "prod": "config/environment.prod.ts",
-        "dev": "config/environment.dev.ts"
+        "source": "environments/environment.ts",
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
       }
     }
   ],
@@ -27,17 +29,16 @@
   "packages": [],
   "e2e": {
     "protractor": {
-      "config": "config/protractor.conf.js"
+      "config": "./protractor.conf.js"
     }
   },
   "test": {
     "karma": {
-      "config": "config/karma.conf.js"
+      "config": "./karma.conf.js"
     }
   },
   "defaults": {
     "styleExt": "css",
-    "prefixInterfaces": false,
-    "lazyRoutePrefix": "+"
+    "prefixInterfaces": false
   }
 }

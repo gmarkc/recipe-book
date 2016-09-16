@@ -1,9 +1,9 @@
-import { RouterConfig } from '@angular/router';
-import { RecipeStartComponent } from './';
+import { Routes } from '@angular/router';
+import { RecipeStartComponent } from './recipe-start.component';
 import { RecipeDetailComponent } from './recipe-detail';
 import { RecipeEditComponent } from './recipe-edit';
 
-export const RECIPE_ROUTES: RouterConfig = [
+export const RECIPE_ROUTES: Routes = [
     { path: '', component: RecipeStartComponent },
     { path: 'new', component: RecipeEditComponent },
     { path: ':id', component: RecipeDetailComponent },

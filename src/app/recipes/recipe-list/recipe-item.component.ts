@@ -2,7 +2,6 @@ import { Component, Input } from '@angular/core';
 import { Recipe } from '../../shared';
 
 @Component({
-  moduleId: module.id,
   selector: 'rb-recipe-item',
   templateUrl: 'recipe-item.component.html'
 })

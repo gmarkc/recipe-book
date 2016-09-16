@@ -1,14 +1,14 @@
-import { RecipeBookPage } from './app.po';
+import { MigrationProjectPage } from './app.po';
 
-describe('recipe-book App', function() {
-  let page: RecipeBookPage;
+describe('migration-project App', function() {
+  let page: MigrationProjectPage;
 
   beforeEach(() => {
-    page = new RecipeBookPage();
+    page = new MigrationProjectPage();
   });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('rb works!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });

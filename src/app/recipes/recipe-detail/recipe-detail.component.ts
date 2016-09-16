@@ -1,12 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Recipe } from '../../shared';
-import { RecipeService } from '../';
-import { ShoppingListService } from '../../shopping-list';
 import { Router, ActivatedRoute } from '@angular/router';
+
+import { Recipe } from '../../shared';
+import { RecipeService } from '../recipe.service';
+import { ShoppingListService } from '../../shopping-list';
 import { Subscription } from 'rxjs/Rx';
 
 @Component({
-  moduleId: module.id,
   selector: 'rb-recipe-detail',
   templateUrl: 'recipe-detail.component.html'
 })

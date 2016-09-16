@@ -1,9 +1,11 @@
-export class RecipeBookPage {
+import { browser, element, by } from 'protractor/globals';
+
+export class MigrationProjectPage {
   navigateTo() {
     return browser.get('/');
   }
 
   getParagraphText() {
-    return element(by.css('rb-root h1')).getText();
+    return element(by.css('app-root h1')).getText();
   }
 }

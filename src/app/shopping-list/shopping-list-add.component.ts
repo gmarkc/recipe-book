@@ -3,7 +3,6 @@ import { Ingredient } from '../shared';
 import { ShoppingListService } from './shopping-list.service';
 
 @Component({
-  moduleId: module.id,
   selector: 'rb-shopping-list-add',
   templateUrl: 'shopping-list-add.component.html'
 })
