@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*.btn-primary {
+    background: rgb(73.7%, 17.8%, 23.3%);
+    color: white;
+    border: 1px solid rgb(73.7%, 17.8%, 23.3%);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: rgb(58.9%, 10.5%, 15.3%);
+    color: white;
+    border: 1px solid rgb(58.9%, 10.5%, 15.3%);
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}*/

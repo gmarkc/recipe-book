@@ -2,6 +2,7 @@
 import { BrowserModule  } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent, HeaderComponent, DropdownDirective, routing } from './';
 import { RecipesComponent, RecipeService, RecipeStartComponent } from './recipes';
@@ -28,6 +29,7 @@ import { ShoppingListComponent, ShoppingListAddComponent, ShoppingListService } 
         BrowserModule, 
         FormsModule, 
         ReactiveFormsModule, 
+        HttpModule,
         routing 
     ],
     bootstrap: [ 
