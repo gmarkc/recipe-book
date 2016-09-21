@@ -1,36 +1,23 @@
 ﻿import { NgModule } from '@angular/core';
 import { BrowserModule  } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent, HeaderComponent, DropdownDirective, routing } from './';
-import { RecipesComponent, RecipeService, RecipeStartComponent } from './recipes';
-import { RecipeListComponent, RecipeItemComponent } from './recipes/recipe-list';
-import { RecipeDetailComponent } from './recipes/recipe-detail';
-import { RecipeEditComponent } from './recipes/recipe-edit';
-import { ShoppingListComponent, ShoppingListAddComponent, ShoppingListService } from './shopping-list';
+import { RecipeService } from './recipes';
+import { ShoppingListModule, ShoppingListService } from './shopping-list';
+import { HomeComponent } from './home.component';
 
 @NgModule({
     declarations: [
         AppComponent, 
         HeaderComponent, 
-        RecipesComponent, 
-        RecipeListComponent, 
-        RecipeItemComponent, 
-        RecipeEditComponent, 
-        RecipeDetailComponent, 
-        RecipeStartComponent, 
-        ShoppingListComponent, 
-        ShoppingListAddComponent, 
-        DropdownDirective
+        DropdownDirective, HomeComponent
     ],
     imports: [ 
         BrowserModule, 
-        FormsModule, 
-        ReactiveFormsModule, 
         HttpModule,
-        routing 
+        routing,
+        ShoppingListModule
     ],
     bootstrap: [ 
         AppComponent 
