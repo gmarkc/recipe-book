@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'rb-recipe-start',
+  selector: 'app-recipe-start',
   template: `
     <h1>Please select a Recipe</h1>
   `,

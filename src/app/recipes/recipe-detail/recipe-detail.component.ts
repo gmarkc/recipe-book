@@ -7,7 +7,7 @@ import { ShoppingListService } from '../../shopping-list';
 import { Subscription } from 'rxjs/Rx';
 
 @Component({
-  selector: 'rb-recipe-detail',
+  selector: 'app-recipe-detail',
   templateUrl: 'recipe-detail.component.html'
 })
 export class RecipeDetailComponent implements OnInit, OnDestroy {
@@ -15,7 +15,10 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
     private recipeIndex: number;
     private subscription: Subscription;
 
-    constructor(private sls: ShoppingListService, private router: Router, private route: ActivatedRoute, private recipeService: RecipeService) { }
+    constructor(private sls: ShoppingListService,
+                private router: Router,
+                private route: ActivatedRoute,
+                private recipeService: RecipeService) { }
 
     ngOnInit() {
       this.subscription =  this.route.params.subscribe(
@@ -40,6 +43,6 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
 
     onDelete() {
       this.recipeService.deleteRecipe(this.selectedRecipe);
-      this.router.navigate(['/recipes'])
+      this.router.navigate(['/recipes']);
     }
 }

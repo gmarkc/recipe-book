@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs/Rx';
 import { Recipe } from '../../shared';
 
 @Component({
-  selector: 'rb-recipe-edit',
+  selector: 'app-recipe-edit',
   templateUrl: 'recipe-edit.component.html',
   styles: []
 })
@@ -17,12 +17,15 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
   private recipe: Recipe;
   private isNew = true;
   private subscription: Subscription;
-  constructor(private route: ActivatedRoute, private recipeService: RecipeService, private formBuilder: FormBuilder, private router: Router) { }
+  constructor(private route: ActivatedRoute,
+              private recipeService: RecipeService,
+              private formBuilder: FormBuilder,
+              private router: Router) { }
 
   ngOnInit() {
     this.subscription = this.route.params.subscribe(
       (params: any) => {
-        if(params.hasOwnProperty('id')) {
+        if (params.hasOwnProperty('id')) {
           this.isNew = false;
           this.recipeIndex = +params['id'];
           this.recipe = this.recipeService.getRecipe(this.recipeIndex);
@@ -49,15 +52,15 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
     let recipeContent = '';
     let recipeIngredients: FormArray = new FormArray([]);
 
-    if(!this.isNew) {
-      if(this.recipe.hasOwnProperty('ingredients')) {
+    if (!this.isNew) {
+      if (this.recipe.hasOwnProperty('ingredients')) {
         this.recipe.ingredients.forEach(ingredient => {
           recipeIngredients.push (
             new FormGroup({
               name: new FormControl(ingredient.name, Validators.required),
-              amount: new FormControl(ingredient.amount, [ Validators.required, Validators.pattern("\\d+") ])
+              amount: new FormControl(ingredient.amount, [ Validators.required, Validators.pattern('\\d+') ])
             })
-          )
+          );
         });
       }
       recipeName = this.recipe.name;
@@ -75,7 +78,7 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
 
   onSubmit() {
     const newRecipe = this.recipeForm.value;
-    if(this.isNew) {
+    if (this.isNew) {
       this.recipeService.addRecipe(newRecipe);
     } else {
       this.recipeService.editRecipe(this.recipe, newRecipe);
@@ -95,8 +98,8 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
     (<FormArray>this.recipeForm.controls['ingredients']).push(
       new FormGroup({
             name: new FormControl(name, Validators.required),
-            amount: new FormControl(amount, [ Validators.required, Validators.pattern("\\d+") ])
+            amount: new FormControl(amount, [ Validators.required, Validators.pattern('\\d+') ])
       })
-    )
+    );
   }
 }

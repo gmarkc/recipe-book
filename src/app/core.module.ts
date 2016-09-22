@@ -1,9 +1,9 @@
-import {NgModule} from "@angular/core";
-import {DropdownDirective} from "./dropdown.directive";
-import {HomeComponent} from "./home.component";
+import {NgModule} from '@angular/core';
+import {DropDownDirective} from './dropdown.directive';
+import {HomeComponent} from './home.component';
 
 @NgModule({
-    declarations: [DropdownDirective, HomeComponent],
-    exports: [DropdownDirective]
+    declarations: [DropDownDirective, HomeComponent],
+    exports: [DropDownDirective]
 })
 export class CoreModule {}

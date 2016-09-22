@@ -3,7 +3,7 @@ import { Ingredient } from '../shared';
 import { ShoppingListService } from './shopping-list.service';
 
 @Component({
-  selector: 'rb-shopping-list-add',
+  selector: 'app-shopping-list-add',
   templateUrl: 'shopping-list-add.component.html'
 })
 export class ShoppingListAddComponent implements OnChanges {
@@ -14,7 +14,7 @@ export class ShoppingListAddComponent implements OnChanges {
   constructor(private sls: ShoppingListService) { }
 
   ngOnChanges(changes) {
-    if(changes.item.currentValue === null) {
+    if (changes.item.currentValue === null) {
       this.isAdd = true;
       this.item = {name: null, amount: null};
     } else {
@@ -24,7 +24,7 @@ export class ShoppingListAddComponent implements OnChanges {
 
   onSubmit(ingredient: Ingredient) {
     const newIngredient = new Ingredient(ingredient.name, ingredient.amount);
-    if(!this.isAdd) {
+    if (!this.isAdd) {
       this.sls.editItem(this.item, newIngredient);
       this.onClear();
     } else {

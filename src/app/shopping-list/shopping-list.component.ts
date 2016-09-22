@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Ingredient } from '../shared'
+import { Ingredient } from '../shared';
 import { ShoppingListService } from './shopping-list.service';
 
 @Component({
-  selector: 'rb-shopping-list',
+  selector: 'app-shopping-list',
   templateUrl: 'shopping-list.component.html'
 })
 export class ShoppingListComponent implements OnInit {

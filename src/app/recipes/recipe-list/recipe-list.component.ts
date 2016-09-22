@@ -3,11 +3,11 @@ import { Recipe } from '../../shared';
 import { RecipeService } from '../';
 
 @Component({
-  selector: 'rb-recipe-list',
+  selector: 'app-recipe-list',
   templateUrl: 'recipe-list.component.html'
 })
 export class RecipeListComponent implements OnInit {
-    recipes: Recipe[] = []
+    recipes: Recipe[] = [];
 
     constructor(private recipeService: RecipeService) { }
 

@@ -2,7 +2,7 @@ import {Routes, RouterModule} from '@angular/router';
 import { RecipeStartComponent } from './recipe-start.component';
 import { RecipeDetailComponent } from './recipe-detail';
 import { RecipeEditComponent } from './recipe-edit';
-import {RecipesComponent} from "./recipes.component";
+import {RecipesComponent} from './recipes.component';
 
 const RECIPE_ROUTES: Routes = [
     { path: '', component: RecipesComponent, children: [

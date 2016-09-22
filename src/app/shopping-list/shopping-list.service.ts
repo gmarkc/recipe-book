@@ -2,8 +2,8 @@ import { Ingredient } from '../shared';
 
 export class ShoppingListService {
   private items: Ingredient[] = [];
-  
-  constructor() { }
+
+  constructor() {}
 
   getItems() {
     return this.items;

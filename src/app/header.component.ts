@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { RecipeService } from './recipes/recipe.service';
 
 @Component({
-  selector: 'rb-header',
+  selector: 'app-header',
   templateUrl: 'header.component.html'
 })
 export class HeaderComponent {
