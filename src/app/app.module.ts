@@ -2,22 +2,22 @@
 import { BrowserModule  } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent, HeaderComponent, DropdownDirective, routing } from './';
+import { AppComponent, HeaderComponent, routing } from './';
 import { RecipeService } from './recipes';
 import { ShoppingListModule, ShoppingListService } from './shopping-list';
-import { HomeComponent } from './home.component';
+import {CoreModule} from "./core.module";
 
 @NgModule({
     declarations: [
         AppComponent, 
-        HeaderComponent, 
-        DropdownDirective, HomeComponent
+        HeaderComponent
     ],
     imports: [ 
         BrowserModule, 
         HttpModule,
         routing,
-        ShoppingListModule
+        ShoppingListModule,
+        CoreModule
     ],
     bootstrap: [ 
         AppComponent 
