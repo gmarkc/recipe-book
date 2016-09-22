@@ -5,26 +5,26 @@ import { HttpModule } from '@angular/http';
 import { AppComponent, HeaderComponent, routing } from './';
 import { RecipeService } from './recipes';
 import { ShoppingListModule, ShoppingListService } from './shopping-list';
-import {CoreModule} from "./core.module";
+import {CoreModule} from './core.module';
 
 @NgModule({
     declarations: [
-        AppComponent, 
+        AppComponent,
         HeaderComponent
     ],
-    imports: [ 
-        BrowserModule, 
+    imports: [
+        BrowserModule,
         HttpModule,
         routing,
         ShoppingListModule,
         CoreModule
     ],
-    bootstrap: [ 
-        AppComponent 
+    bootstrap: [
+        AppComponent
     ],
-    providers: [ 
-        RecipeService, 
-        ShoppingListService 
+    providers: [
+        RecipeService,
+        ShoppingListService
     ]
 })
 export class AppModule {}
